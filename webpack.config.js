@@ -50,7 +50,7 @@ module.exports = {
   entry,
   output: {
     path: path.join(__dirname, 'build/'),
-    publicPath: '/build',
+    publicPath: '/build/',
     filename: 'js/main.min.js',
   },
   module: {
