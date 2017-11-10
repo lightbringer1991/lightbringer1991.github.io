@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
+import 'bootstrap';
 import './styles.scss';
 
 
@@ -47,8 +48,7 @@ class Navigation extends React.PureComponent {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            Menu
-            <i className="fa fa-bars" />
+            Menu <i className="fa fa-bars" />
           </button>
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav ml-auto">

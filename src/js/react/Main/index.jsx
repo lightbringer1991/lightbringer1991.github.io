@@ -3,9 +3,10 @@ import $ from 'jquery';
 import 'jquery.easing';
 import Navigation from '../Navigation';
 import Map from '../Map';
+import EmbeddedYoutube from '../EmbeddedYoutube';
 import { PAGE_TOP, SECTION_ABOUT, SECTION_PROJECTS, SECTION_CONTACT } from '../../constants';
-import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
-import '../../../../node_modules/font-awesome/scss/font-awesome.scss';
+import 'bootstrap/scss/bootstrap.scss';
+import 'font-awesome/scss/font-awesome.scss';
 import './styles.scss';
 
 
@@ -98,9 +99,16 @@ class Main extends React.PureComponent {
         {/* Projects Section */}
         <section id={SECTION_PROJECTS} className="download-section content-section text-center">
           <div className="container">
-            <div className="col-lg-8 mx-auto">
+            <div className="col-lg-10 mx-auto">
               <h2>Projects that I have participated in</h2>
-              TBD
+              <div className="row">
+                <div className="col-xs-12 col-md-6">
+                  <EmbeddedYoutube url='https://www.youtube.com/embed/Xk3Wptuob2I' />
+                </div>
+                <div className="col-xs-12 col-md-6">
+                  <EmbeddedYoutube url='https://www.youtube.com/embed/Z9mrI0ECQQA' />
+                </div>
+              </div>
             </div>
             <a className="btn btn-circle" onClick={this.navigationOnclick(SECTION_CONTACT)}>
               <i className="fa fa-angle-double-down animated" />
