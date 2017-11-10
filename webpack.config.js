@@ -7,6 +7,12 @@ const PORT = process.env.PORT || '8888';
 
 const plugins = [
   new ExtractTextPlugin('css/styles.min.css'),
+  new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery',
+    'window.jQuery': 'jquery',
+    Popper: ['popper.js', 'default'],
+  }),
   new webpack.HotModuleReplacementPlugin(), // enable HMR globally
   new webpack.NamedModulesPlugin(), // prints more readable module names in the browser console on HMR updates
 ];
